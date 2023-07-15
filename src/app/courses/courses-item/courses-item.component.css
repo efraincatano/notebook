@@ -1,0 +1,12 @@
+.courseDiv {
+    width: 10rem;
+    height: 11rem;
+    margin: 2px;
+    font-size: 1.3rem;
+    border: solid thin darkgrey;
+    float: left;
+    padding: 0.25rem;
+    margin-left: 20px;
+    margin-top: 5px;
+  }
+

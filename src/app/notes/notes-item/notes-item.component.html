@@ -1,0 +1,11 @@
+<table class="table">
+<tbody>
+    <tr>
+      <td>{{ noteItem.course }}</td>
+      <td>{{ noteItem.week }}</td>
+      <td>{{ noteItem.note }}</td>
+      <td><a [routerLink]="[noteItem._id, 'edit']" class="btn btn-primary">Edit</a></td>
+      <td><a (click)="onDelete()"  class="btn btn-danger">Delete</a></td>
+    </tr>
+</tbody>
+</table>

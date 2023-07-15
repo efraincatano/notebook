@@ -1,0 +1,36 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="new-button">
+            <a class="btn btn-success" [routerLink]="['new']">New Note</a>
+        </div>
+    </div>
+    <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Course</th>
+        <th scope="col">Week</th>
+        <th scope="col">Note</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col">Options</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    </table>
+        <app-notes-item
+          *ngFor="let note of notes"
+          [noteItem]="note"
+        ></app-notes-item>
+
+  </div>

@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <h1>{{ course.name }}</h1>
+          </div>
+        </div>
+        <div class="row wrapper vcenter-item">
+          <div class="col-xs-4">
+            <a [routerLink]="'edit'" class="btn btn-primary">Edit</a>
+            <a (click)="onDelete()" class="btn btn-danger">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 font-weight-bold">
+          <p>Description: </p> {{ course.description }}
+        </div>
+      </div>
+    </div>
+  </div>
+  

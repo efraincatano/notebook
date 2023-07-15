@@ -1,0 +1,52 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+      <form id="courses-edit" #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <label for="name">Course Name:</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              size="120"
+              max="120"
+              name="name"
+              [ngModel]="course?.name"
+              required
+              #title="ngModel"
+            />
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <label for="description">Course Description:</label>
+            <input
+              type="text"
+              id="description"
+              class="form-control"
+              size="120"
+              max="255"
+              name="description"
+              [ngModel]="course?.description"
+            />
+          </div>
+        </div>
+  
+
+        
+        <div *ngIf="!f.valid" class="alert alert-danger">
+          The Course Title is a required field.
+        </div>
+        <div class="row">
+          <div class="col-xs-12 btn-toolbar">
+            <button class="btn btn-success" type="submit" [disabled]="!f.valid">Save</button>
+            <button class="btn btn-primary" type="button" (click)="onCancel()">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
